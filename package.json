@@ -27,7 +27,8 @@
     "*.js": ["fmt", "validate", "git add"],
     "*.json": ["fmt", "git add"]
   },
-  "files": ["lib/index.js"],
+  "main": "lib/index.js",
+  "files": ["lib"],
   "keywords": ["float", "expression", "babel", "plugin", "babel plugin"],
   "dependencies": {},
   "devDependencies": {
