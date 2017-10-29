@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expression 1`] = `
+"
+0.1 + 0.2 === 0.3
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+typeof (0.1 + 0.2) === 'number' && typeof 0.3 === 'number' ? Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON : 0.1 + 0.2 === 0.3;
+"
+`;
+
+exports[`expression 2 1`] = `
+"
+0.3 === 0.1 + 0.2
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+typeof 0.3 === 'number' && typeof (0.1 + 0.2) === 'number' ? Math.abs(0.3 - (0.1 + 0.2)) < Number.EPSILON : 0.3 === 0.1 + 0.2;
+"
+`;
+
+exports[`if statement 1`] = `
+"
+if (0.1 + 0.2 === 0.3) {
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+if (typeof (0.1 + 0.2) === 'number' && typeof 0.3 === 'number' ? Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON : 0.1 + 0.2 === 0.3) {}
+"
+`;
+
+exports[`not number 1`] = `
+"
+'hello' === 'world'
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+typeof 'hello' === 'number' && typeof 'world' === 'number' ? Math.abs('hello' - 'world') < Number.EPSILON : 'hello' === 'world';
+"
+`;
+
+exports[`oprator is not === 1`] = `
+"
+0.1 + 0.2 == 0.3
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+0.1 + 0.2 == 0.3;
+"
+`;
+
+exports[`valiable 2 1`] = `
+"
+var a = 0.1
+var b = 0.2
+var c = 0.3
+var x = 'hoge'
+a + b === c
+c === a + b
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+var a = 0.1;
+var b = 0.2;
+var c = 0.3;
+var x = 'hoge';
+typeof (a + b) === 'number' && typeof c === 'number' ? Math.abs(a + b - c) < Number.EPSILON : a + b === c;
+typeof c === 'number' && typeof (a + b) === 'number' ? Math.abs(c - (a + b)) < Number.EPSILON : c === a + b;
+"
+`;
+
+exports[`var 1`] = `
+"
+var a = 0.1
+var b = 0.2
+a + b === 0.3
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+var a = 0.1;
+var b = 0.2;
+typeof (a + b) === 'number' && typeof 0.3 === 'number' ? Math.abs(a + b - 0.3) < Number.EPSILON : a + b === 0.3;
+"
+`;
