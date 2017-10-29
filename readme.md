@@ -6,6 +6,25 @@
 
 > Babel plugin for float equal
 
+## Why
+
+```js
+0.1 + 0.2 === 0.3
+// => false
+```
+
+WTF!?!??
+Because there is rounding error.
+
+Use this plugin.
+
+```js
+0.1 + 0.2 === 0.3
+// => true
+```
+
+In many cases, this one is more convenient.
+However, you should avoid using floating point numbers.
 
 ## Install
 
