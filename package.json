@@ -13,7 +13,7 @@
     "precommit": "lint-staged",
     "prepublish": "yarn run build",
     "build": "babel src -d lib --ignore *.test.js",
-    "fmt": "prettier --write '**/*.{js,json}'",
+    "fmt": "prettier --write '**/*.{js,json,md}'",
     "flow": "flow",
     "lint": "eslint .",
     "test": "jest",
@@ -24,14 +24,14 @@
   },
   "lint-staged": {
     "*.js": ["fmt", "validate", "git add"],
-    "*.json": ["fmt", "git add"]
+    "*.{json,md}": ["fmt", "git add"]
   },
   "main": "lib/index.js",
   "files": ["lib"],
   "keywords": ["float", "expression", "babel", "plugin", "babel plugin"],
   "dependencies": {},
   "devDependencies": {
-    "all-contributors-cli": "^4.5.1",
+    "all-contributors-cli": "^4.10.1",
     "babel-cli": "^6.26.0",
     "babel-jest": "^21.2.0",
     "babel-log": "^2.0.0",
@@ -42,7 +42,7 @@
     "flow-bin": "^0.57.3",
     "husky": "^0.14.3",
     "jest": "^21.2.1",
-    "lint-staged": "^4.3.0",
-    "prettier": "^1.7.4"
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2"
   }
 }
